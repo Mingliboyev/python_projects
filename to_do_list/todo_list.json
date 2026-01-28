@@ -1,9 +1,12 @@
 [
     {
-        "task1": {
-            "title": "Homework",
-            "done": true,
-            "id": "hm"
-        }
+        "title": "Piano",
+        "id": 1,
+        "done": true
+    },
+    {
+        "title": "Homework",
+        "id": 2,
+        "done": true
     }
 ]

@@ -1,15 +1,11 @@
-import json
-import os
-PATH=os.path.dirname(__file__)
-file_path=os.path.join(PATH, "todo_list.json")
-with open(file_path, "r") as file:
-    data=json.load(file)
-title="Piano"
-id="pi"
-new_task={
-    f"Task{len(data)+1}":{"title":title,"done":False, "id":id}
-}
-data.append(new_task)
-with open(file_path, "w") as f:
-    json.dump(data, f, indent=4)
-
+data=[{'title':'welo', 'id':1}]
+all_ids=[]
+for i in data:
+    print(f"{i['id']} for {i['title']}")
+    all_ids.append(i['id'])    
+while True:
+    task_id=input("Write its ID: ")
+    if task_id in all_ids:
+        break
+    else:
+        print(f"{task_id} doesn`t exist")
